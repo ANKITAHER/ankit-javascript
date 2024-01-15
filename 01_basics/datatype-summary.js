@@ -60,3 +60,8 @@ console.log ( typeof scoreValue)
 // i)               Object                                object
 // ii)              Array                                  object
 // iii)             Function                            function(object)
+
+
+// **************************memory*************************
+
+// stack memory ( primitive)       heap memory ( non primitive)
