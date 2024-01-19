@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing images </h2>
+    <ul id="images">
+        <li>
+          <img width="100px" height="100px" id="photoshop1"
+            src="https://images.pexels.com/photos/8142972/pexels-photo-8142972.jpeg" alt="photoshop">
+        </li>
+        <li>
+          <img width="100px" height="100px" id="photoshop2"
+            src="https://images.pexels.com/photos/7937221/pexels-photo-7937221.jpeg" alt="">
+        </li>
+        <li>
+          <img width="100px" height="100px" id="photoshop3"
+            src="https://images.pexels.com/photos/7937366/pexels-photo-7937366.jpeg" alt="">
+        </li>
+        <li>
+          <img width="100px" height="100px" id="d"
+            src="https://images.pexels.com/photos/8293766/pexels-photo-8293766.jpeg" alt="">
+        </li>
+        <li>
+          <img width="100px" height="100px" id="photoshop5"
+            src="https://images.pexels.com/photos/8815873/pexels-photo-8815873.jpeg" alt="">
+        </li>
+        <li>
+            <a style="color: aliceblue;" href="https://www.google.com/" id="google">google</a>
+        </li>
+      </ul>
+</body>
+
+<script>
+
+        //type,toElement,defaultPrevented
+    //target , toWlement ,srcElement , currentTarget,
+    //clientx , clienty, screenx , screen y 
+    //altkey , ctrlkey , shiftkey , keycode 
+
+    // document.getElementById('photoshop4').onclick = function(){
+    //     alert('call')
+    // }
+
+
+    // document.getElementById('images').addEventListener('click' , function(e){
+    //   console.log('click inside imag');
+    // },false)
+
+    // document.getElementById('d').addEventListener('click' , function(e){
+    //   console.log('four click ');
+    //   e.stopPropagation()
+    // },false)
+
+    // //attacheEvent
+
+    // document.getElementById('google').addEventListener('click' , function(e){
+    //     e.preventDefault()
+    // })
+
+    document.getElementById('images').addEventListener('click' , function(e){
+      console.log(e.target.tagName);
+      if(e.target.tagName === 'IMG'){
+        let removeIt = e.target.parentNode
+      removeIt.remove()
+      }
+ 
+    })
+
+
+    </script>
+</html>
